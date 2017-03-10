@@ -58,12 +58,34 @@
         <div class="sheet-table-row">
             <div class="sheet-table-cell sheet-cell-50">
                 <div class="sheet-header">CORE VALUES</div>
-                <button type='roll' value='&{template:default} {{name=*@{name}* rolls a Body check}} {{result=[[([[2d6]]+[[(@{body})]])]]}}' name='roll_Body'></button>
-                BODY: <input type='number' name='attr_body' value='1'>
-                <button type='roll' value='&{template:default} {{name=*@{name}* rolls a Mind check}} {{result=[[([[2d6]]+[[(@{mind})]])]]}}' name='roll_Mind'></button>
-                MIND: <input type='number' name='attr_mind' value='1'>
-                <button type='roll' value='&{template:default} {{name=*@{name}* rolls a Soul check}} {{result=[[([[2d6]]+[[(@{soul})]])]]}}' name='roll_Soul'></button>
-                SOUL: <input type='number' name='attr_soul' value='1'>
+                <div class="sheet-table">
+                    <div class="sheet-table-row">
+                        <div class="sheet-table-cell sheet-cell-30">
+                            <button type='roll' value='&{template:default} {{name=*@{name}* rolls a Body check}} {{result=[[([[2d6+(@{body})+(@{tempBody})]])]]}}' name='roll_Body'></button>
+                            BODY: <input type='number' name='attr_body' value='1'>
+                        </div>
+                        <div class="sheet-table-cell sheet-cell-30">
+                            <button type='roll' value='&{template:default} {{name=*@{name}* rolls a Mind check}} {{result=[[([[2d6+(@{mind})+(@{tempMind})]])]]}}' name='roll_Mind'></button>
+                            MIND: <input type='number' name='attr_mind' value='1'>
+                        </div>
+                        <div class="sheet-table-cell sheet-cell-30">
+                            <button type='roll' value='&{template:default} {{name=*@{name}* rolls a Soul check}} {{result=[[([[2d6+(@{soul})+(@{tempSoul})]])]]}}' name='roll_Soul'></button>
+                            SOUL: <input type='number' name='attr_soul' value='1'>
+                        </div>
+                    </div>
+                    <div class="sheet-table-row">
+                        <div class="sheet-table-cell sheet-cell-30">
+                            TEMP MOD: <input type='number' name='attr_tempBody' value='0'>
+                        </div>
+                        <div class="sheet-table-cell sheet-cell-30">
+                            TEMP MOD: <input type='number' name='attr_tempMind' value='0'>
+                        </div>
+                        <div class="sheet-table-cell sheet-cell-30">
+                            TEMP MOD: <input type='number' name='attr_tempSoul' value='0'>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             <div class="sheet-table-cell sheet-cell-50">
                 <div class="sheet-header">INITIATIVE</div>
